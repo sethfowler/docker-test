@@ -1,11 +1,11 @@
-FROM ubuntu:16.04 as builder
+FROM ubuntu:16.04 AS builder
 
 WORKDIR /
 RUN mkdir -p built && \
     cd built && \
     echo "It worked" > file.txt
 
-FROM alpine:latest  
+FROM alpine:latest
 
 WORKDIR /
 RUN mkdir -p from-built
